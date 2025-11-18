@@ -15,3 +15,7 @@ Structured the system so exactly one thread writes and one reads, enabling safe,
 
 •	Memory Barriers
 Applied memory fences (memory_order_acquire and memory_order_release) to guarantee proper visibility and ordering of operations so no thread accesses stale or partially written data.
+
+# ASSUMPTIOMS:
+1. 1KB Buffer
+2.32-bit microcontroller
