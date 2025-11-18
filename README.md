@@ -4,16 +4,16 @@ In real-time and multi-core systems, multiple threads often need to share data c
 
 # PROPOSED SOLUTION
 
-•	Ring Buffer Architecture
+•	Ring Buffer Architecture<BR>
 Implemented a fixed-size circular buffer where data wraps automatically, allowing continuous producer–consumer communication without shifting elements.
 
-•	Atomic Operations
+•	Atomic Operations<BR>
 Used atomic load/store for head and tail pointers to eliminate race conditions during concurrent read/write in shared memory.
 
-•	SPSC (Single Producer, Single Consumer) Model
+•	SPSC (Single Producer, Single Consumer) Model<BR>
 Structured the system so exactly one thread writes and one reads, enabling safe, lock-free data transfer with minimal overhead.
 
-•	Memory Barriers
+•	Memory Barriers<BR>
 Applied memory fences (memory_order_acquire and memory_order_release) to guarantee proper visibility and ordering of operations so no thread accesses stale or partially written data.
 
 # ASSUMPTIOMS:
